@@ -31,7 +31,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("InvestorChart/Tesla_Stock.csv", function(data) {
+d3.csv("../data/Tesla_Stock.csv", function(data) {
   console.log(data);
   data.forEach(function(d) {
     d.date = parseDate(d.date);
