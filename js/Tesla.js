@@ -1,7 +1,7 @@
 (function(){
   var margin = {top: 20, right: 50, bottom: 30, left: 50},
-    width = 700 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 500 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
   var parseDate = d3.time.format("%Y-%m-%d").parse,
       bisectDate = d3.bisector(function(d) { return d.date; }).left,
@@ -102,10 +102,11 @@
     }
 
     svg.append("text")
-          .attr("x", 550)             
-          .attr("y", 400)
+          .attr("x", 20)             
+          .attr("y", 5)
           .attr("text-anchor", "middle")  
-          .style("font-size", "30px") 
+          .style("font-size", "50px") 
+          .style("")
           .text("Tesla");
   });
 })();
