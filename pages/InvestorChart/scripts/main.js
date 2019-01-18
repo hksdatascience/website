@@ -33,7 +33,6 @@ var svg = d3.select("body").append("svg")
 
 d3.csv("Tesla_Stock.csv", function(error, data) {
   if (error) throw error;
-  console.log(data);
 
   data.forEach(function(d) {
     d.date = parseDate(d.date);
