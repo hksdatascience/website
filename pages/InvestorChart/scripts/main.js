@@ -37,7 +37,6 @@ d3.csv("Tesla_Stock.csv", function(error, data) {
 
   data.forEach(function(d) {
     d.date = parseDate(d.date);
-    console.log(d.date);
     d.close = +d.close;
   });
 
