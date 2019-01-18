@@ -1,7 +1,7 @@
 (function(){
   var margin = {top: 20, right: 50, bottom: 30, left: 50},
-      width = 960 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      width = 500 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
 
   var parseDate = d3.time.format("%Y-%m-%d").parse,
       bisectDate = d3.bisector(function(d) { return d.date; }).left,
@@ -32,7 +32,7 @@
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("../data/GM_Stock.csv", function(data) {
+  d3.csv("../data/GOOGL_Stock.csv", function(data) {
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
