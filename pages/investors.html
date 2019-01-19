@@ -11,6 +11,9 @@
 
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/syntax.css">
+  <link rel="stylesheet" href="../css/Tesla.css">
+  <link rel="stylesheet" href="../css/GM.css">
+
 
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
@@ -85,16 +88,38 @@
   </header>
 
 
+
   <!--Content begins-->
   <div class="posts-wrapper">
     <div class="page-title misc-content">
-    <h1>
-      Autonomous Vehicles as Stock Disruptors
-    </h1>
-    <h3> Tesla is at the forefront of autonomous vehicles. This graph shows their stock trends over the last 5 years:</h3>
+    
+    <h3> High Growth Companies Embrace Tech </h3>
+    <h6> In 2015, this meant electric vehicles, but self driving technology is gradually becoming a bigger driver in the market </h6>
 
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="../js/Tesla.js"></script>
+    <div id="chart-container-multiline"> </div>
+
+    <h4> Tesla</h4>
+
+
+      <p>Tesla is at the forefront of autonomous vehicles. This graph shows their stock trends over the last 5 years:
+
+
+   <div id="chart-container-tesla"> </div>
+
+    <h4> GM</h4>
+
+    <p> GM is also leading the way. However, they do are not known for the same kind of innovation as Tesla. This may be a true perception, but perceptions can quickly change, especially with GM putting 8 semi-autonomous car types on the road in 2018 & 2019. 
+    </p>
+
+   <div id="chart-container-gm"> </div>
+
+    <h4> Google</h4>
+
+    <p>And of course, Google is always going up</p>
+
+   <div id="chart-container-google"> </div>
+
+
 
     </div>
   </div>
@@ -118,6 +143,17 @@
   </footer>
 
 </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="../js/multi-line.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="../js/Tesla.js"></script>
+        <script src="../js/GM.js"></script>
+        <script src="../js/GOOGL.js"></script>
+
+
 
 </body>
 </html>

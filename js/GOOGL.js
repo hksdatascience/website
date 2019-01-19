@@ -1,7 +1,7 @@
 (function(){
   var margin = {top: 20, right: 50, bottom: 30, left: 50},
-    width = 500 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+      width = 500 - margin.left - margin.right,
+      height = 300 - margin.top - margin.bottom;
 
   var parseDate = d3.time.format("%Y-%m-%d").parse,
       bisectDate = d3.bisector(function(d) { return d.date; }).left,
@@ -26,13 +26,13 @@
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.close); });
 
-  var svg = d3.select("#chart-container-tesla").append("svg")
+  var svg = d3.select("#chart-container-google").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("../data/Tesla_Stock.csv", function(data) {
+  d3.csv("../data/GOOGL_Stock.csv", function(data) {
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
@@ -46,13 +46,11 @@
     x.domain([data[0].date, data[data.length - 1].date]);
     y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
-    //This code creates the x axis
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
-    //This code creates the y axis
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
@@ -63,28 +61,21 @@
         .style("text-anchor", "end")
         .text("Price ($)");
 
-    //This code creates the actual line
     svg.append("path")
         .datum(data)
         .attr("class", "line")
-        .attr("d", line)
-        .attr("stroke-width", 200)
-        .attr("stroke","red");
+        .attr("d", line);
 
-    //This code creates the mouseover display
     var focus = svg.append("g")
         .attr("class", "focus")
         .style("display", "none");
 
-    //This code creates the little circle
     focus.append("circle")
         .attr("r", 4.5);
 
-    //This code creates the text that goes outside the circle
     focus.append("text")
         .attr("x", 12)
         .attr("dy", ".35em");
-
 
     svg.append("rect")
         .attr("class", "overlay")
@@ -103,13 +94,5 @@
       focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
       focus.select("text").text(formatCurrency(d.close));
     }
-
-    svg.append("text")
-          .attr("x", 20)             
-          .attr("y", 5)
-          .attr("text-anchor", "middle")  
-          .style("font-size", "50px") 
-          .style("")
-          .text("Tesla");
   });
 })();
