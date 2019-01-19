@@ -44,7 +44,7 @@
     });
 
     x.domain([data[0].date, data[data.length - 1].date]);
-    y.domain(d3.extent(data, function(d) { return d.close; }));
+    y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
     svg.append("g")
         .attr("class", "x axis")
