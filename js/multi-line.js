@@ -1,7 +1,7 @@
 (function(){
 	// basic SVG setup
 	var margin = { top: 20, right: 100, bottom: 40, left: 100 };
-	var height = 500 - margin.top - margin.bottom;
+	var height = 600 - margin.top - margin.bottom;
 	var width = 960 - margin.left - margin.right;
 
 	var svg = d3.select("#chart-container-multiline").append("svg")
@@ -41,7 +41,9 @@
 				Nvidia: +d.Nvidia,
 				Toyota: +d.Toyota,
 				Honda: +d.Honda,
-				GM: +d.GM
+				GM: +d.GM,
+				Ferrari: +d.Ferrari,
+				NIO: +d.NIO
 			};
 		}, 
 		function(error,data) {
@@ -179,7 +181,7 @@
 				var i = bisectDate(data, x0, 1); // gives index of element which has date higher than x0
 				var d0 = data[i - 1], d1 = data[i];
 				var d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-				var close = d3.max([+d.Tesla,+d.GM,+d.Ford,+d.Toyota,+d.Nvidia,+d.Honda]);
+				var close = d3.max([+d.Tesla,+d.GM,+d.Ford,+d.Toyota,+d.Nvidia,+d.Honda, +d.Ferrari], +d.NIO);
 
 				focus.select("circle.y")
 				.attr("transform", "translate(" + xScale(d.date) + "," + yScale(close) + ")");
