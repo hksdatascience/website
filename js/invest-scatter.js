@@ -3,7 +3,7 @@
 d3.csv('./../data/investment-data.csv', function loadCallback(error, data) {
     data.forEach(function(d) { // convert strings to numbers
         d.Investment = +d.Investment;
-        d.Date = +d.Date;
+        d.Year = +d.Year;
     });
     makeVis(data);
 });
@@ -25,8 +25,8 @@ var makeVis = function(data) {
   var colorScale = d3.scale.category10();
 
   var xScale = d3.scale.linear()
-      .domain([ d3.min(data, function(d) { return d.Date; }) - 1,
-                d3.max(data, function(d) { return d.Date; }) + 1 ])
+      .domain([ d3.min(data, function(d) { return d.Year; }) - 1,
+                d3.max(data, function(d) { return d.Year; }) + 1 ])
       .range([0, width]);
 
   var yScale = d3.scale.linear()
@@ -66,6 +66,7 @@ var makeVis = function(data) {
       .style("text-anchor", "end")
       .text("Investment (in Millions $)");
 
+
   // Add the tooltip container to the vis container
   // it's invisible and its position/contents are defined during mouseover
   var tooltip = d3.select("#chart-container-investments").append("div")
@@ -77,7 +78,7 @@ var makeVis = function(data) {
       var color = colorScale(d.Technology);
       var html  = d.Company + "<br/>" +
                   "<span style='color:" + color + ";'>" + d.Techology + "</span><br/>" +
-                  "<b>" + d.Date + "</b> sugar, <b/>" + d.Investment + "</b> calories";
+                  "<b>" + d.Year + "</b> Year, <b/>" + d.Investment + "</b> Technology";
 
       tooltip.html(html)
           .style("left", (d3.event.pageX + 15) + "px")
@@ -100,8 +101,8 @@ var makeVis = function(data) {
   .enter().append("circle")
     .attr("class", "dot")
     .attr("r", 5.5) // radius size, could map to another data dimension
-    .attr("cx", function(d) { return xScale( d.Investment ); })     // x position
-    .attr("cy", function(d) { return yScale( d.Date ); })  // y position
+    .attr("cx", function(d) { return xScale( d.Year ); })     // x position
+    .attr("cy", function(d) { return yScale( d.Investment ); })  // y position
     .style("fill", function(d) { return colorScale(d.Technology); })
     .on("mouseover", tipMouseover)
     .on("mouseout", tipMouseout);
