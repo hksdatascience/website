@@ -44,13 +44,14 @@
     });
 
     x.domain([data[0].date, data[data.length - 1].date]);
-    y.domain(d3.extent(data, function(d) { return d.close; }));
+    y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
     //This code creates the x axis
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
+
     //This code creates the y axis
     svg.append("g")
         .attr("class", "y axis")
@@ -66,7 +67,9 @@
     svg.append("path")
         .datum(data)
         .attr("class", "line")
-        .attr("d", line);
+        .attr("d", line)
+        .attr("stroke-width", 200)
+        .attr("stroke","red");
 
     //This code creates the mouseover display
     var focus = svg.append("g")

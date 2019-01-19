@@ -15,8 +15,8 @@ body {
 
 .line {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke: red;
+  stroke-width: 0.5px;
 }
 
 .overlay {
