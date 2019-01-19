@@ -1,0 +1,12 @@
+/* stylesheet for your custom graph */
+.axis line {
+    stroke: #ddd;
+}
+
+.axis text {
+    fill: #888;
+}
+
+.btn {
+    cursor: pointer;
+}
