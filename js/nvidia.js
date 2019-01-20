@@ -1,10 +1,10 @@
 (function(){
 	// basic SVG setup
 	var margin = { top: 20, right: 100, bottom: 30, left: 70 };
-	var height = 900 - margin.top - margin.bottom;
+	var height = 500 - margin.top - margin.bottom;
 	var width = 600 - margin.left - margin.right;
 
-	var svg = d3.select("#chart-container-multiline").append("svg")
+	var svg = d3.select("#chart-container-nvidia").append("svg")
 			.attr("width",width + margin.left + margin.right)
 			.attr("height",height + margin.top + margin.bottom)
 			.append("g")
@@ -36,15 +36,7 @@
 	d3.csv("./../data/stock_5_years_columns.csv", function(d) {
 			return {
 				date: parseDate(d.date),
-				Google: +d.Google,
-				Tesla: +d.Tesla,
-				Ford: +d.Ford,
 				Nvidia: +d.Nvidia,
-				Toyota: +d.Toyota,
-				Honda: +d.Honda,
-				GM: +d.GM,
-				Ferrari: +d.Ferrari,
-				FiatChrysler: +d.FiatChrysler
 			};
 		}, 
 		function(error,data) {
@@ -183,8 +175,7 @@
 				var i = bisectDate(data, x0, 1); // gives index of element which has date higher than x0
 				var d0 = data[i - 1], d1 = data[i];
 				var d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-				var close = d3.max([+d.Google,+d.Tesla,+d.GM,+d.Ford,+d.Toyota,
-									+d.Nvidia,+d.Honda, +d.Ferrari, +d.FiatChrysler]);
+				var close = d3.max([+d.Nvidia,+d.NIO]);
 				focus.select("circle.y")
 				.attr("transform", "translate(" + xScale(d.date) + "," + yScale(close) + ")");
 

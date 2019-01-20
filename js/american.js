@@ -4,7 +4,7 @@
 	var height = 900 - margin.top - margin.bottom;
 	var width = 600 - margin.left - margin.right;
 
-	var svg = d3.select("#chart-container-multiline").append("svg")
+	var svg = d3.select("#chart-container-manufacturers").append("svg")
 			.attr("width",width + margin.left + margin.right)
 			.attr("height",height + margin.top + margin.bottom)
 			.append("g")
@@ -13,7 +13,7 @@
 	// setup scales - the domain is specified inside of the function called when we load the data
 	var xScale = d3.time.scale().range([0, width]);
 	var yScale = d3.scale.linear().range([height, 0]);
-	var color = d3.scale.category20();
+	var color = d3.scale.category10();
 
 	// setup the axes
 	var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
@@ -36,10 +36,7 @@
 	d3.csv("./../data/stock_5_years_columns.csv", function(d) {
 			return {
 				date: parseDate(d.date),
-				Google: +d.Google,
-				Tesla: +d.Tesla,
 				Ford: +d.Ford,
-				Nvidia: +d.Nvidia,
 				Toyota: +d.Toyota,
 				Honda: +d.Honda,
 				GM: +d.GM,
@@ -183,8 +180,7 @@
 				var i = bisectDate(data, x0, 1); // gives index of element which has date higher than x0
 				var d0 = data[i - 1], d1 = data[i];
 				var d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-				var close = d3.max([+d.Google,+d.Tesla,+d.GM,+d.Ford,+d.Toyota,
-									+d.Nvidia,+d.Honda, +d.Ferrari, +d.FiatChrysler]);
+				var close = d3.max([+d.GM,+d.Ford,+d.Toyota,+d.Honda, +d.Ferrari, +d.FiatChrysler]);
 				focus.select("circle.y")
 				.attr("transform", "translate(" + xScale(d.date) + "," + yScale(close) + ")");
 
