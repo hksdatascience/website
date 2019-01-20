@@ -1,6 +1,6 @@
-var WIDTH = 600, HEIGHT = 600;
+var WIDTH = 600, HEIGHT = 200;
 
-var ROW_HEIGHT = 10, LABEL_WIDTH = 50, MARGIN_TOP = 25;
+var ROW_HEIGHT = 25, LABEL_WIDTH = 50, MARGIN_TOP = 25;
 
 var sizeFn = absoluteSize;
 
@@ -9,18 +9,12 @@ var entries = null;
 var buttons = d3.select("#canvas-svg").append("div").style("margin-bottom", "10px");
 
 var showCounts = buttons.append("span").attr("class", "btn btn-primary").text("Counts").on("click", function() {
-    showPct.classed("btn-primary", false);
+
     showCounts.classed("btn-primary", true);
     sizeFn = absoluteSize;
     render();
 });
 
-var showPct = buttons.append("span").attr("class", "btn").text("Percentage").on("click", function() {
-    showPct.classed("btn-primary", true);
-    showCounts.classed("btn-primary", false);
-    sizeFn = relativeSize;
-    render();
-});
 
 var svg = d3.select("#canvas-svg").append("svg").attr({
     width: WIDTH + 20,
@@ -31,7 +25,7 @@ var maleScale = d3.scale.linear(), femaleScale = d3.scale.linear(), maleAxis = d
 
 svg.append("text").text("SAFETY").attr({
     "y": MARGIN_TOP - 3,
-    "dx": 10
+    "dx": 2
 });
 
 svg.append("text").text("Human_Drives").attr({
@@ -121,8 +115,8 @@ function absoluteSize(row, entries) {
     var max = d3.max(entries, function(d) {
         return Math.max(d.AV, d.Human_Drive);
     });
-    femaleScale.domain([ 0, max ]).range([ 0, (WIDTH - LABEL_WIDTH) / 2 ]);
-    maleScale.domain([ 0, max ]).range([ 0, -(WIDTH - LABEL_WIDTH) / 2 ]);
+    femaleScale.domain([ 0, max ]).range([ 0, (WIDTH - LABEL_WIDTH) / 1 ]);
+    maleScale.domain([ 0, max ]).range([ 0, -(WIDTH - LABEL_WIDTH) / 1 ]);
     femaleAxis.ticks(10).tickFormat(null);
     maleAxis.ticks(10).tickFormat(null);
     row.select(".Human_Drive").attr({
