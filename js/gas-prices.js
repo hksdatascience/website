@@ -24,27 +24,29 @@
 
   var line = d3.svg.line()
       .x(function(d) { return x(d.date); })
-      .y(function(d) { return y(d.close); });
+      .y(function(d) { return y(d.Price); });
 
-  var svg = d3.select("#chart-container-tesla").append("svg")
+  var svg = d3.select("#chart-container-gas").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("../data/Tesla_Stock.csv", function(data) {
+  d3.csv("../data/5_year_gas_prices.csv", function(data) {
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
-      d.close = +d.close;
+      d.Price = +d.Price;
     });
+
+    console.log(data);
 
     data.sort(function(a, b) {
       return a.date - b.date;
     });
 
     x.domain([data[0].date, data[data.length - 1].date]);
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+    y.domain([0, d3.max(data, function(d) { return d.Price; })]);
 
     //This code creates the x axis
     svg.append("g")
@@ -100,8 +102,8 @@
           d0 = data[i - 1],
           d1 = data[i],
           d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-      focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-      focus.select("text").text(formatCurrency(d.close));
+      focus.attr("transform", "translate(" + x(d.date) + "," + y(d.Price) + ")");
+      focus.select("text").text(formatCurrency(d.Price));
     }
 
       var item = data[bisectDate(data, new Date(2016, 1, 9))];
@@ -113,18 +115,7 @@
         .attr("y1",0)
         .attr("x2",x(item.date))
         .attr("y2",height)
-        .style("stroke", "red");
-
-      var item2 = data[bisectDate(data, new Date(2018, 8, 18))];
-      
-      console.log(item);
-
-      svg.append("line")
-        .attr("x1",x(item2.date))
-        .attr("y1",0)
-        .attr("x2",x(item2.date))
-        .attr("y2",height)
-        .style("stroke", "red");
+        .style("stroke", "black");
 
 
   });
