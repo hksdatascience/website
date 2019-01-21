@@ -15,7 +15,7 @@ var xCat = "Year",
     rCat = "Autonomous Vehicle Level",
     colorCat = "Technology";
 
-d3.csv("./../data/investment-data.csv", function(data) {
+d3.csv("./../data/whoswinning/investment-data.csv", function(data) {
   data.forEach(function(d) {
     d.Year = +d.Year;
     d["Investment (in millions USD)"] = +d["Investment (in millions USD)"];
