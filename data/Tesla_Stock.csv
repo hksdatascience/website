@@ -1,6 +1,4 @@
-date,close,name,realname
-2014-01-16,170.97,TSLA,Tesla
-2014-01-17,170.01,TSLA,Tesla
+date,close,Name,RealName
 2014-01-21,176.68,TSLA,Tesla
 2014-01-22,178.56,TSLA,Tesla
 2014-01-23,181.5,TSLA,Tesla
@@ -1257,3 +1255,6 @@ date,close,name,realname
 2019-01-11,347.26,TSLA,Tesla
 2019-01-14,334.4,TSLA,Tesla
 2019-01-15,344.43,TSLA,Tesla
+2019-01-16,346.05,TSLA,Tesla
+2019-01-17,347.31,TSLA,Tesla
+2019-01-18,302.26,TSLA,Tesla
