@@ -32,7 +32,7 @@
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("../data/5_year_gas_prices.csv", function(data) {
+  d3.csv("../data/investors/5_year_gas_prices.csv", function(data) {
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);
