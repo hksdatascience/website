@@ -1,6 +1,5 @@
 # Section B, Team B3
-<br/>
-<br/>Chang Hyun Baek
+Chang Hyun Baek
 <br/>Eric Englin
 <br/>Keting Zhou
 <br/>Yuchen Zheng
