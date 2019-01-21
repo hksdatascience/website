@@ -1,18 +1,24 @@
 
+var parseDate = d3.time.format("%-m/%d/%y").parse;
+var bisectDate = d3.bisector(function(d) { return d.date; }).left;
+var formatValue = d3.format(",.2f");
+
 
 d3.csv('./../data/investment-data.csv', function loadCallback(error, data) {
     data.forEach(function(d) { // convert strings to numbers
         d.Investment = +d.Investment;
-        d.Year = +d.Year;
+        d.date = +parseDate(d.date);
     });
     makeVis(data);
 });
 
+
 var makeVis = function(data) {
   // Common pattern for defining vis size and margins
-  var margin = { top: 20, right: 20, bottom: 30, left: 40 },
+  var margin = { top: 20, right: 20, bottom: 30, left: 60 },
       width  = 960 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
+
 
   // Add the visualization svg canvas to the vis-container <div>
   var canvas = d3.select("#chart-container-investments").append("svg")
@@ -21,13 +27,26 @@ var makeVis = function(data) {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+  data.sort(function(a, b) {
+    return a.date - b.date;
+  });
+
   // Define our scales
   var colorScale = d3.scale.category10();
 
-  var xScale = d3.scale.linear()
-      .domain([ d3.min(data, function(d) { return d.Year; }) - 1,
-                d3.max(data, function(d) { return d.Year; }) + 1 ])
+//  var xScale = d3.time.scale()
+//      .range([0, width])
+//      .domain([d3.min(data, function(c) { return d3.min(c.values, function(v) { return v.date; }); }),
+//              d3.max(data, function(c) { return d3.max(c.values, function(v) { return v.date; }); })
+//              ]);
+
+
+  var xScale = d3.time.scale()
+      .domain([data[0].date, data[data.length - 1].date])
       .range([0, width]);
+
+      //.domain([ d3.min(data, function(d) { return d.Date; }) - 1,
+      //          d3.max(data, function(d) { return d.Date; }) + 1 ])
 
   var yScale = d3.scale.linear()
       .domain([ d3.min(data, function(d) { return d.Investment; }) - 1,
@@ -78,7 +97,7 @@ var makeVis = function(data) {
       var color = colorScale(d.Technology);
       var html  = d.Company + "<br/>" +
                   "<span style='color:" + color + ";'>" + d.Techology + "</span><br/>" +
-                  "<b>" + d.Year + "</b> Year, <b/>" + d.Investment + "</b> Technology";
+                  "<b>" + d.Date + "</b> Date, <b/>" + d.Investment + "</b> Technology";
 
       tooltip.html(html)
           .style("left", (d3.event.pageX + 15) + "px")
@@ -101,7 +120,7 @@ var makeVis = function(data) {
   .enter().append("circle")
     .attr("class", "dot")
     .attr("r", 5.5) // radius size, could map to another data dimension
-    .attr("cx", function(d) { return xScale( d.Year ); })     // x position
+    .attr("cx", function(d) { return xScale( d.date ); })     // x position
     .attr("cy", function(d) { return yScale( d.Investment ); })  // y position
     .style("fill", function(d) { return colorScale(d.Technology); })
     .on("mouseover", tipMouseover)
