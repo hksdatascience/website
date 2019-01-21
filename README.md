@@ -20,4 +20,7 @@ https://trello.com/code4policy
 <br/>/pages - html files for the individual pages
 <br/>
 <br/>
+<img src="https://changhyunbaek.github.io/team-b3/Sprint%2%Burndown.JPG?raw=true" alt="Sprint 2 Burndown" style="width:400px;border:none;">
 <img src="https://changhyunbaek.github.io/team-b3/wireframe.jpg?raw=true" alt="Team B3 wireframe image" style="width:400px;border:none;">
+
+      
