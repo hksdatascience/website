@@ -32,7 +32,7 @@
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("../data/Tesla_Stock.csv", function(data) {
+  d3.csv("../data/investors/Tesla_Stock.csv", function(data) {
 
     data.forEach(function(d) {
       d.date = parseDate(d.date);

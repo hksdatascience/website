@@ -33,7 +33,7 @@
 	var focus = svg.append("g").style("display","none");
 
 	// import data and create chart
-	d3.csv("./../data/stock_5_years_columns.csv", function(d) {
+	d3.csv("./../data/investors/stock_5_years_columns.csv", function(d) {
 			return {
 				date: parseDate(d.date),
 				Ford: +d.Ford,
