@@ -149,6 +149,7 @@ function cleanup(data) {
 var credits = d3.select("#canvas-svg").append("div").style('width', WIDTH + 40 + 'px');
 
 credits.append("div").html('Source: <a href="http://www.visualisingdata.com/index.php/2013/03/1578-responses-to-the-first-data-visualisation-census/">Data Visualization Census 2013</a>');
+credits.append("div").html('Data Source: <a href="https://data.wprdc.org/dataset/autonomous-vehicle-survey-of-bicyclists-and-pedestrians</a>');
 
 d3.csv("../data/security_expert.csv")
     .get(function(error, data) {
