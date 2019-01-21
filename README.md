@@ -18,3 +18,6 @@ https://trello.com/code4policy
 <br/>/data - Final data used to draw D3 charts
 <br/>/js - JavaScript files both for template and specific pages
 <br/>/pages - html files for the individual pages
+<br/>
+<br/>
+<img src="https://changhyunbaek.github.io/team-b3/wireframe.jpg?raw=true" alt="Team B3 wireframe image" style="width:400px;border:none;">
