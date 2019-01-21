@@ -24,7 +24,7 @@ var svg = d3.select("#canvas-svg").append("svg").attr({
 var maleScale = d3.scale.linear(), femaleScale = d3.scale.linear(), maleAxis = d3.svg.axis().orient("top").tickSize(-HEIGHT, 0, 0).scale(maleScale), femaleAxis = d3.svg.axis().orient("top").tickSize(-HEIGHT, 0, 0).scale(femaleScale), maleAxisG = svg.append("g").attr("class", "axis").attr("transform", "translate(" + (LABEL_WIDTH + (WIDTH - LABEL_WIDTH) / 2) + "," + (MARGIN_TOP - 1) + ")"), femaleAxisG = svg.append("g").attr("class", "axis").attr("transform", "translate(" + (LABEL_WIDTH + (WIDTH - LABEL_WIDTH) / 2) + "," + (MARGIN_TOP - 1) + ")");
 
 svg.append("text").text("SAFETY").attr({
-    "y": MARGIN_TOP - 3,
+    "y": MARGIN_TOP - 10,
     "dx": 2
 });
 
@@ -89,17 +89,17 @@ function render() {
             "dx": 10,
             "class": "label",
             fill: "#333",
-            transform: " translate(" + (-(WIDTH - LABEL_WIDTH) / 2 - LABEL_WIDTH) + "," + ROW_HEIGHT + ") scale(.85)"
+            transform: " translate(" + (-(WIDTH - LABEL_WIDTH) / 2 - LABEL_WIDTH) + "," + ROW_HEIGHT + ") scale(1)"
         });
         row.append("rect").attr({
             "class": "Human_Drive",
             fill: "#1f77b4",
-            height: ROW_HEIGHT - .20
+            height: ROW_HEIGHT - .30
         });
         row.append("rect").attr({
             "class": "AV",
             fill: "#ff7f0e",
-            height: ROW_HEIGHT - .20
+            height: ROW_HEIGHT - .30
         });
     }).call(sizeFn, entries);
     row.select(".label").text(function(d) {
@@ -115,8 +115,8 @@ function absoluteSize(row, entries) {
     var max = d3.max(entries, function(d) {
         return Math.max(d.AV, d.Human_Drive);
     });
-    femaleScale.domain([ 0, max ]).range([ 0, (WIDTH - LABEL_WIDTH) / 1 ]);
-    maleScale.domain([ 0, max ]).range([ 0, -(WIDTH - LABEL_WIDTH) / 1 ]);
+    femaleScale.domain([ 0, max ]).range([ 0, (WIDTH - LABEL_WIDTH) / 2 ]);
+    maleScale.domain([ 0, max ]).range([ 0, -(WIDTH - LABEL_WIDTH) / 2 ]);
     femaleAxis.ticks(10).tickFormat(null);
     maleAxis.ticks(10).tickFormat(null);
     row.select(".Human_Drive").attr({
@@ -146,7 +146,7 @@ function cleanup(data) {
     //data.forEach(function(d) {});
     return data;
 }
-var credits = d3.select("#canvas-svg").append("div").style('width', WIDTH + 20 + 'px');
+var credits = d3.select("#canvas-svg").append("div").style('width', WIDTH + 40 + 'px');
 
 credits.append("div").html('Source: <a href="http://www.visualisingdata.com/index.php/2013/03/1578-responses-to-the-first-data-visualisation-census/">Data Visualization Census 2013</a>');
 
