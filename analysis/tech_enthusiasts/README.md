@@ -8,16 +8,17 @@ This is an example to explain how we processed dataset to draw charts
 https://www.kaggle.com/sogun3/uspollution
 
 4. See what the data is look like
-cat pollution_us_2000_2016.csv | head -n 30 | cut -d ',' -f 6,9,25,26,27,28,29
+>> cat pollution_us_2000_2016.csv | head -n 30 | cut -d ',' -f 6,9,25,26,27,28,29
 
 5. Original CSV file is 400.9MB big. Remove unnecessary columns
-cat pollution_us_2000_2016.csv | cut -d ',' -f 6,9,25,26,27,28,29 > data_selective_columns_only.csv
+>> cat pollution_us_2000_2016.csv | cut -d ',' -f 6,9,25,26,27,28,29 > data_selective_columns_only.csv
 
 6. Extract Massachusetts data only
-cat data_selective_columns_only.csv | csvgrep -c State -m Massachusetts > MA_only.csv
+>> cat data_selective_columns_only.csv | csvgrep -c State -m Massachusetts > MA_only.csv
 
 7. Replace comma with tab to make the file TSV and reformat data
-python3 format_csv.py
+Transformating date/time format 
+>> python3 format_csv.py
 
 8. "4_final_data.tsv" (99kb) is the final dataset
 
