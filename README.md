@@ -1,6 +1,6 @@
 # Harvard Kennedy School Data Science Club
 <br/>Eric Englin
-<br/>
+<br/>Forked from DPI 691 Harvard Kennedy School final project & millenial jekyll template
 <br/>
 <br/>This is the official github repo for the data science club website
 <br/>
