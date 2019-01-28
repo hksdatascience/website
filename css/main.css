@@ -524,6 +524,17 @@ pre code {
   .fa-facebook:hover {
     color: #3d5b99; }
 
+.fa-slack {
+  padding: 5px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s; }
+  .fa-slack:hover {
+    color: #3d5b99; }
+
+
 .fa-google-plus {
   padding: 5px;
   -webkit-transition: 1s;
