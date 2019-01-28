@@ -5,7 +5,7 @@
 <br/>This is the official github repo for the data science club website
 <br/>
 Live page link:
-https://goo.gl/8N9QH1
+https://hksdatascience.github.io/website/
 <br/>
 <br/>Directory explained:
 <br/>/analysis - contains original(raw) data, processed data, scripts used to process data.
