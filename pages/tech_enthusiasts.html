@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>    
+      HKS DPI-691M, team B3
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/syntax.css">
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</head>
+
+
+<body>
+
+<div class="container">
+  <header class="site-header">
+  <h3 class="site-title">
+    <a href="../">Autonomous Vehicles</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="../pages/security_experts.html" class="menu-link">Security Experts</a>
+    
+      <a href="../pages/tech_enthusiasts.html" class="menu-link">Tech Enthusiasts</a>
+    
+      <a href="../pages/investors.html" class="menu-link">Investors</a>
+    
+      <a href="../pages/policy_makers.html" class="menu-link">Policy Makers</a>
+    
+      <a href="../pages/whoswinning.html" class="menu-link">Who's Winning?</a>
+    
+    
+    
+      <a href="https://instagram.com" class="menu-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    
+      <a href="mailto:" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+      <a href="../feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+      <a href="../pages/security_experts.html" class="menu-link">For Security Experts</a>
+    
+      <a href="../pages/tech_enthusiasts.html" class="menu-link">For Tech Enthusiasts</a>
+    
+      <a href="../pages/investors.html" class="menu-link">For Investors</a>
+    
+      <a href="../pages/policy_makers.html" class="menu-link">For Policy Makers</a>
+    
+      <a href="../pages/whoswinning.html" class="menu-link">Who's Winning?</a>
+    
+    
+
+      <a href="https://twitter.com" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    
+      <a href="https://www.facebook.com" class="menu-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    
+      <a href="https://instagram.com" class="menu-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    
+      <a href="mailto:" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+      <a href="../feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+  </header>
+
+
+  <!--Content begins-->
+  <div class="posts-wrapper">
+    <div class="page-title misc-content">
+    <h1>
+      How people can benefit from<br>
+      the Autonomous Vehicle Technology?
+    </h1>
+
+    <article>
+ 
+      <p>In 2017, U.S. petroleum consumption averaged about 19.96 million barrels per day (b/d), which included about 1 million b/d of biofuels.</p>
+
+      <p>Gasoline is the most consumed petroleum product in the United States. In 2017, consumption of finished motor gasoline averaged about 9.33 million b/d (392 million gallons per day), which was equal to about 47% of total U.S. petroleum consumption.</p>
+
+
+      <!-- add D3 pie chart -->
+      <div id="pieChart"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+      <script src="../js/d3pie.min.js"></script>
+      <script>
+        var pie = new d3pie("pieChart", {
+          "header": {
+            "title": {
+              "text": "U.S. petroleum consumption by sector",
+              "fontSize": 22,
+              "font": "georgia"
+            },
+            "subtitle": {
+              "text": "Petroleum consumption by sector and share of total in 2017",
+              "color": "#999999",
+              "fontSize": 11,
+              "font": "georgia"
+            },
+            "titleSubtitlePadding": 10
+          },
+          "footer": {
+            "text": "Source: U.S. Energy Information Administration",
+            "color": "#999999",
+            "fontSize": 11,
+            "font": "open sans",
+            "location": "bottom-center"
+          },
+          "size": {
+            "canvasHeight": 400,
+            "canvasWidth": 590,
+            "pieOuterRadius": "88%"
+          },
+          "data": {
+            "content": [
+              {
+                "label": "Transportation (14.02M)",
+                "value": 71,
+                "color": "#d0743c"
+              },
+              {
+                "label": "Industrial (4.76M)",
+                "value": 24,
+                "color": "#98abc5"
+              },
+              {
+                "label": "Residential (0.52M)",
+                "value": 3,
+                "color": "#8a89a6"
+              },
+              {
+                "label": "Commercial (0.47M)",
+                "value": 2,
+                "color": "#7b6888"
+              },
+              {
+                "label": "Electric power (0.10M)",
+                "value": 1,
+                "color": "#6b486b"
+              }
+            ]
+          },
+          "labels": {
+            "outer": {
+              "pieDistance": 32
+            },
+            "inner": {
+              "format": "value"
+            },
+            "mainLabel": {
+              "font": "verdana"
+            },
+            "percentage": {
+              "color": "#e1e1e1",
+              "font": "verdana",
+              "decimalPlaces": 0
+            },
+            "value": {
+              "color": "#e1e1e1",
+              "font": "verdana"
+            },
+            "lines": {
+              "enabled": true,
+              "color": "#cccccc"
+            },
+            "truncation": {
+              "enabled": true
+            }
+          },
+          "tooltips": {
+            "enabled": true,
+            "type": "placeholder",
+            "string": "{label}: {value}%"
+          },
+          "effects": {
+            "pullOutSegmentOnClick": {
+              "effect": "linear",
+              "speed": 400,
+              "size": 8
+            }
+          }
+        });
+      </script>
+
+
+      <br><br>
+      <p>Below dataset deals with vehicle's Carbon Monoxide emission in MA for every day from 2000 - 2016 documented by the U.S. EPA.</p>
+
+
+      <!-- add D3 line chart, CO emissions in MA -->
+      <!-- used iframe to avoid D3 js conflict -->
+      <iframe src="../analysis/tech_enthusiasts/chart.html" style="height:360px;width:600px;border:none;"></iframe>
+
+
+      <br><br>
+      <p>Autonomous Vehicles automatically detect the shortest distance, thus reducing travel distance. In addition, the travel time is shortened. Therefore, CO emissions can be reduced as the travel distance and time are reduced.
+
+      The belief that a transition from conventional oil-powered cars to Autonomous Vehicles as well as electric vehicles (EVs) is both possible and necessary to reduce greenhouse gas emissions and improve urban air quality.</p>
+
+      <br><br>
+
+       <!-- image chart with CSS style sheet applied -->
+      <img src="../data/tech_enthusiasts/EV_sales.png?raw=true" alt="Forecast of global annual Vehicle Miles Traveled by EVs in 2040" style="width:600px;border:none;">
+
+
+      <br><br>
+      <p>Various forecasts for global annual electric vehicle sales, the cumulative size of the electric vehicle fleet, and EVs’ share of the global auto fleet are shown above.</p>
+      <p>The graph of global “Annual Sales of EVs” shows that sales of EVs are modest before 2020. The middle and right-hand graphs show how much longer it takes for cumulative EVs to become a significant part of the global auto fleet. People generally hold onto their existing cars for many years, delaying the pace of EV penetration. In the United States and Europe, the average age of passenger vehicles is about 11 years, and it is much higher in some other regions. Even in rapid penetration scenarios, EVs don’t become a substantial part of the fleet until 2030 or beyond.</p>
+      <p>However, in the current trend, the automatic driving function will be applied to the car at high speed. In the long term, it is expected that the automatic driving function and the electric vehicle will be promoted at the same time, which will help to reduce the green house gas emission. In addition, the cost of purchasing gasoline fuel is expected to be considerably reduced, thereby enhancing economic efficiency.</p>
+
+
+      <!-- list references and sources -->
+      <br><br><br><br>
+      <p>References:
+      <br><br>
+      [1] U.S. Envergy Information Administration, <i>"Oil: Crude and Petroleum Products Explained"</i>, <a href="https://www.eia.gov/energyexplained/index.php?page=oil_use">https://www.eia.gov/energyexplained/index.php?page=oil_use</a>
+      <br><br>
+      [2] Brenda So, <i>"U.S. Pollution Data, Pollution in the U.S. since 2000"</i>, <a href="https://www.kaggle.com/sogun3/uspollution/home">https://www.kaggle.com/sogun3/uspollution/home</a>      
+      <br><br>
+      [3] Marianne Kah, <i>"Electronic Vehicles and  Their Impact on Oil Demand: Why Forecasts Differ"</i>, <a href="https://energypolicy.columbia.edu/sites/default/files/pictures/CGEP_Electric%20Vehicles%20and%20Their%20Impact%20on%20Oil%20Demand-Why%20Forecasts%20Differ.pdf">https://energypolicy.columbia.edu/sites/default/files/<br>pictures/CGEP_Electric%20Vehicles%20and%20Their%20Impact%20on%20Oil%20Demand-Why%20Forecasts%20Differ.pdf</a> 
+      </p>
+
+    </article>
+
+    </div>
+  </div>
+  <!--Content ends-->
+
+
+
+  <footer class="footer">
+  
+    <a href="https://twitter.com" class="menu-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+    <a href="https://www.facebook.com" class="menu-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  
+    <a href="https://instagram.com" class="menu-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  
+    <a href="mailto:" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+    <a href="./feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+    <div class="post-date"><a href="https://changhyunbaek.github.io/team-b3/">Team B3 | HKS DPI-691M</a></div>
+  </footer>
+
+</div>
+
+</body>
+</html>

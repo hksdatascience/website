@@ -1,11 +1,16 @@
-# Harvard Kennedy School Data Science Club
+# Section B, Team B3
+Chang Hyun Baek
 <br/>Eric Englin
+<br/>Keting Zhou
+<br/>Yuchen Zheng
 <br/>
-<br/>
-<br/>This is the official github repo for the data science club website
 <br/>
 Live page link:
 https://goo.gl/8N9QH1
+<br/>
+Project page link:
+https://trello.com/code4policy
+<br/>
 <br/>
 <br/>Directory explained:
 <br/>/analysis - contains original(raw) data, processed data, scripts used to process data.
@@ -15,3 +20,9 @@ https://goo.gl/8N9QH1
 <br/>/pages - html files for the individual pages
 <br/>
 <br/>
+<img src="https://github.com/changhyunbaek/team-b3/blob/master/Sprint%202%20Burndown.JPG" alt="Sprint 2 Burndown" style="width:400px;border:none;">
+<br/>
+<br/>
+<img src="https://changhyunbaek.github.io/team-b3/wireframe.jpg?raw=true" alt="Team B3 wireframe image" style="width:400px;border:none;">
+
+      
