@@ -43,7 +43,7 @@ body img {
   align: middle;
   margin: 5px auto auto auto;
   display: block;
-  max-width: 600px; }
+  max-width: 800px; }
 
 p {
   display: block;
@@ -197,7 +197,7 @@ th, td {
   padding: 0px 10px 10px; }
 
 .misc-content {
-  max-width: 800px;
+  max-width: 1000px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -222,7 +222,7 @@ th, td {
   align: middle;
   margin: 5px auto 25px;
   display: block;
-  max-width: 600px; }
+  max-width: 1000px; }
 
 @media (max-width: 1100px) {
   .page-content {
