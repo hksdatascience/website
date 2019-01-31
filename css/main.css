@@ -111,7 +111,7 @@ th, td {
   Site container
 */
 .container {
-  width: 1100px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -197,7 +197,7 @@ th, td {
   padding: 0px 10px 10px; }
 
 .misc-content {
-  max-width: 600px;
+  max-width: 800px;
   display: block;
   margin-left: auto;
   margin-right: auto;
