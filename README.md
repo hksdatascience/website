@@ -4,7 +4,7 @@ Eric Englin
 <br/>Forked from DPI 691 Harvard Kennedy School final project & millenial jekyll template
 <br/>
 Live page link:
-https://hksdatascience.github.io/website/
+https://goo.gl/JqoLQz
 <br/>
 <br/>
 <br/>
