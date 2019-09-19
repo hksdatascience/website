@@ -99,86 +99,59 @@
       </p>
       <br>
 
-      <h3>Meeting Details</h3>
+      <h3>Open Leadership Positions</h3>
       <p>Typical meetings are on Wednesday evenings from 6-8pm at the Digital HKS office (1 Brattle Square, Office #470). Food is provided!</p>
       <br>
       <p>Some of the things we are up to:</p>
     <ul>
-      <li><strong>Python Bootcamp Series</strong>: </li>
-      <li><strong>Project Work</strong>:</li>
-      <li><strong>Speaker Series</strong>:</li>
+      <li>
+        <strong>First Year Co-Chair:</strong>:
+        Working with the Second Year Co-Chair, this position is responsible for the strategic direction of the data science club.
+        Additionally, you will oversee event planning, weekly operations and maintains relationships with other stakeholders that work with the club.
+        The First Year Co-Chair should ideally plan to transition to become the Second Year Co-Chair for the 2020-21 academic year.
+        <br>
+      </li>
+      <li>
+        <strong>Financial Officer:</strong>:
+        Responsible for overseeing club budget over the year. This will include tracking all receipts from club dinners or other
+        miscellaneous goods purchased for club activity over the year. This position will also be heavily involved in maintaining relationships
+        with research centers that fund the data science club and, if necessary, will need to help to secure more funding if funds are not sufficient.
+        <br>
+      </li>
+      <li>
+        <strong>Communications Officer</strong>:
+        Responsible for communications to club members. For the most part, this includes the MailChimp weekly newsletter, Slack group, and posting events
+        on HKS daily emails. Works closely with co-chairs, research centers, and other clubs to remain up-to-date on events and programming that will be of
+        interest to those in data science club. Training will be provided for all communication platforms.
+          <br>
+      </li>
+      <li>
+        <strong>Urban Analytics Officer</strong>:
+        Due to the interest in analytics being done at the city-level, this position is meant to find ways to create events, projects,
+        or other activities related to urban analytics. This can include projects like mapping 311 calls in Boston, securing the City of Boston
+        analytics team for speaking engagements, etc.
+          <br>
+      </li>
+      <li>
+        <strong>Other Activities</strong>:
+        Other activities necessary for the club include maintaining the Data Science Club Website, creating Python or other technical trainings for members,
+        and creating club activities like data science projects or speaker engagements
+          <br>
+      </li>
     </ul>
-      <br>
-
-      <h3>How To Get Involved</h3>
-          <li><a href="https://goo.gl/forms/UIQbR3fRno8esXYT2"><strong>Google Form</strong></a>: Completing this form will get you onto our email list</li>
-          <li><a href="https://hksdatascienceclub.slack.com/messages/CFDCZ5G3G/details/"><strong>Slack</strong></a>: This will have same event information and more data science discussion</li>
-          <li><a href="https://github.com/hksdatascience"><strong>Github</strong></a>: This will have our latest projects and code for this website as well. Feel free to use anything that you'd like!</li>
-
 
       <br>
+
+      <h3>Fill out this application to get involved</h3>
+          <li>
+            <a href="https://forms.gle/MPuvefp7vyhAxBPg6"><strong>Leadership Application</strong></a>:
+              This application is a very quick form to let us know about your experience, interests, and goals for the data science club as a future leader.
+          </li>
+
       <br>
-    <article>
+      <br>
 
-
-      <h1>Current and Former Members</h1>
-
-
-      <div class="row">
-        <div class="column">
-          <img src="./../eric-englin.jpg" alt="Snow" style="width:100%">
-          <h6>Eric Englin</h6>
-          <p> President</p>
-          <p>Eric is a 2nd year MPP</p>
-        </div>
-        <div class="column">
-          <img src="./../jake-schneider.jpeg" alt="Forest" style="width:100%">
-          <h6>Jake Schneider</h6>
-          <p> Financial Officer</p>
-          <p>Jake is a 2nd year MPA/ID</p>
-        </div>
-        <div class="column">
-          <img src="./../nicolas-diaz.jpeg" alt="Mountains" style="width:100%">
-          <h6>Nicolas Diaz</h6>
-          <p> Urban Analytics Officer</p>
-          <p>Nicolas is a 2nd year MPP.</p>
-        </div>
-        <div class="column">
-          <img src="./../ryan-brellenthin.jpeg" alt="Mountains" style="width:100%">
-          <h6>Ryan Brellenthin</h6>
-          <p>Ryan is a 2nd year MPP. He is also doing a dual degree with Harvard Business School</p>
-        </div>
-
-        <div class="column">
-          <img src="./../nicole-jones.jpg" alt="Forest" style="width:100%">
-          <h6>Nicole Jones</h6>
-          <p>Nicole is a researcher at the Harvard Medical School</p>
-        </div>
-        <div class="column">
-          <img src="./../martin-montenegro.jpg" alt="Snow" style="width:100%">
-          <h6>Martin Montenegro</h6>
-          <p>Martin is a 2nd year MPP</p><br>
-        </div>
-    <div class="column">
-      <img src="./../brian-eng.jpg" alt="Snow" style="width:100%">
-      <h6>Brian Eng</h6>
-      <p>Alumni</p>
-      <p>Brian is currently a Captain at the New York Police Department</p>
-    </div>
-    <div class="column">
-      <img src="./../chang-baek.jpg" alt="Snow" style="width:100%">
-      <h6>Chang Hyun Baek</h6>
-      <p>Alumni</p>
-      <p>Chang is currently a Technology Solutions Consultant at Google.</p>
-    </div>
-    <div class="column">
-      <img src="./../cat-marks.jpg" alt="Snow" style="width:100%">
-      <h6>Catherine Marks</h6>
-      <p>Alumni</p>
-      <p>Cat is currently working as a data science consultant in Australia.</p>
-    </div>
-</div>
-</article>
+      
 
 </div>
 </div>
